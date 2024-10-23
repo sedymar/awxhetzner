@@ -1,12 +1,17 @@
----
-- name: Mettre à jour tous les serveurs Hetzner Cloud
-  hosts: hetzner
-  become: yes
-  tasks:
-    - name: Mettre à jour la liste des paquets
-      ansible.builtin.apt:
-        update_cache: yes
+lugin: hcloud
+token: M2zX3msiWObdFifGA6W2ejFIMwKMTGJfLKSVOr4b5JD590lITBIAaYlBBK9XzEx7
+#token: testawxhetzner"
+#locations:
+#  - hel1-dc2
+keyed_groups:
+  - key: location
+    prefix: hcloud_location
+  - key: status
+    prefix: server_status
+  - key: labels
+    separator: ""
+  - key: type
+    separator: ""
+  - key: image_os_flavor
+    separator: ""
 
-    - name: Mettre à jour tous les paquets installés
-      ansible.builtin.apt:
-        upgrade: dist
