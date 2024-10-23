@@ -14,4 +14,3 @@ keyed_groups:
     separator: ""
   - key: image_os_flavor
     separator: ""
-
