@@ -1,0 +1,17 @@
+plugin: hcloud
+token: M2zX3msiWObdFifGA6W2ejFIMwKMTGJfLKSVOr4b5JD590lITBIAaYlBBK9XzEx7
+#token: testawxhetzner
+#locations:
+#  - hel1-dc2
+keyed_groups:
+  - key: location
+    prefix: hcloud_location
+  - key: status
+    prefix: server_status
+  - key: labels
+    separator: ""
+  - key: type
+    separator: ""
+  - key: image_os_flavor
+    separator: ""
+
